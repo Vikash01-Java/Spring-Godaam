@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+<!--  inject dependency through the setter -->
+<bean name="emp2" class="com.my.spring.model.Employee1">
+<property name="id" value="101"/>
+<property name="name" value="vikas"/>
+<property name="gender" value="male"/>
+<property name="address1" ref="add2"/>
+<property name="list">
+<list>
+
+<value>109</value>
+<value>19</value>
+<value>309</value>
+<value>339</value>
+<value>449</value>
+<value>109</value>
+</list>
+
+</property>
+<property name="set">
+<set>
+<value>109</value>
+<value>19</value>
+<value>309</value>
+<value>339</value>
+<value>449</value>
+<value>109</value>
+</set>
+</property>
+
+<property name="map">
+<map>
+<entry key="1" value="one"/>
+<entry key="2" value="two"/>
+<entry key="3" value="three"/>
+<entry key="4" value="four"/>
+<entry key="5" value="five"/>
+<entry key="4" value="FOUR"/>
+</map>
+</property>
+</bean>
+
+<bean name="add2" class="com.my.spring.model.Address1">
+<constructor-arg name="city" value="noida"/>
+<constructor-arg name="" value="up"/>
+</bean>
+
+<!--  inject dependency through the constructor -->
+
+<bean name="emp1" class="com.my.spring.model.Employee1">
+<constructor-arg name="id" value="101"/>
+<constructor-arg name="name" value="tony"/>
+<constructor-arg name="gender" value="male"/>
+<constructor-arg name="address1" ref="add1"/>
+<constructor-arg name="list">
+<list>
+
+<value>109</value>
+<value>19</value> 
+<value>309</value>
+<value>339</value>
+<value>449</value>
+<value>109</value>
+</list>
+</constructor-arg>
+
+<constructor-arg name="set">
+<set>
+<value>109</value>
+<value>19</value>
+<value>309</value>
+<value>339</value>
+<value>449</value>
+<value>109</value>
+</set>
+</constructor-arg>
+
+<constructor-arg name="map">
+<map>
+<entry key="1" value="one"/>
+<entry key="2" value="two"/>
+<entry key="3" value="three"/>
+<entry key="4" value="four"/>
+<entry key="5" value="five"/>
+<entry key="4" value="FOUR"/>
+</map>
+</constructor-arg>
+</bean>
+                  
+<bean name="add1" class="com.my.spring.model.Address1">
+<constructor-arg name="city" value="GZB"/>
+<constructor-arg name="" value="up"/>
+</bean>   
+
+
+</beans>  

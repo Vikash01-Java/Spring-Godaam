@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- //inner Bean-->
+        <bean name="stu" class=" com.my.spring.model.Student2" >
+<property name="contect2">
+         <bean  class=" com.my.spring.model.Contect2" scope="singleton">
+         <constructor-arg name="city" value="gaziabaad"/>
+          <constructor-arg name="" value="up"/>
+          
+</bean>
+</property>
+ <property name="id" value="1"/>
+      <property name="name" value="kapil"/> 
+          <property name="gender" value="male"/>
+  <property name="list">
+<list>
+
+<value>109</value>
+<value>19</value> 
+<value>309</value>
+<value>339</value>
+<value>449</value>
+<value>109</value>
+</list>
+
+</property>
+<property name="set">
+<set>
+<value>109</value>
+<value>19</value>
+<value>309</value>
+<value>339</value> 
+<value>449</value>
+<value>109</value>
+</set>
+</property>
+
+<property name="map">
+<map>
+<entry key="1" value="one"/>
+<entry key="2" value="two"/>
+<entry key="3" value="three"/>
+<entry key="4" value="four"/>
+<entry key="5" value="five"/>
+<entry key="4" value="FOUR"/>
+</map>
+</property>
+</bean>
+</beans>

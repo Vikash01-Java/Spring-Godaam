@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="address" class="com.my.spring.model.Address3" scope="prototype">
+		<constructor-arg name="city" value="ghaziabad"/>
+		<constructor-arg name="state" value="UP"/>
+	</bean>
+	<bean id="empA" class="com.my.spring.model.Employee3" init-method="xmlInitMethod"  destroy-method="xmlDestroyMethod" >
+		<property name="name" value="Mona"/>
+		<property name="age" value="101"/>
+		<property name="salary" value="10"/>
+
+	</bean>
+
+	
+</beans>

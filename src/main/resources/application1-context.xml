@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+<!--  inject through the dependency setter -->
+<bean name="emp2" class="com.my.spring.model.Employeee">
+<property name="id" value="101"/>
+<property name="name" value="vikas"/>
+<property name="gender" value="male"/>
+<property name="address" ref="add2"/>
+
+</bean>
+
+<bean name="add2" class="com.my.spring.model.Address">
+<constructor-arg name="city" value="noid"/>
+<constructor-arg name="" value="up"/>
+</bean>
+
+
+<!--  inject through the dependency constructor 
+
+<bean name="emp1" class="com.my.spring.model.Employeee">
+<constructor-arg name="id" value="101"/>
+<constructor-arg name="name" value="tony"/>
+<constructor-arg name="gender" value="male"/>
+<constructor-arg name="address" ref="add1"/>
+
+</bean>
+
+<bean name="add1" class="com.my.spring.model.Address">
+<constructor-arg name="city" value="GZB"/>
+<constructor-arg name="" value="up"/>
+</bean>-->
+
+</beans>  

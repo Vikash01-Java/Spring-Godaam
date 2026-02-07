@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+     <!-- Auto wire  
+<constructor-arg> → type + order 100% correct hone chahiye
+<property> → safe aur flexible, kyunki Spring setters use karta hai
+Isliye aapke case me <property> se output aata hai,
+lekin <constructor-arg> galat order se error deta hai
+ -->   
+ <!-- ✅ Contact bean 
+    <bean id="contect1" class="com.my.spring.model.Contect">
+        <constructor-arg name="city" value="noida"/>
+        <constructor-arg name="state" value="up"/>
+    </bean>
+
+    
+    <bean id="stu1" class="com.my.spring.model.Student" autowire="constructor">
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="kunal"/>
+        <constructor-arg name="gender" value="male"/>
+
+        <constructor-arg name="list">
+            <list>
+                <value>109</value>
+                <value>19</value>
+                <value>309</value>
+                <value>339</value>
+                <value>449</value>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg name="set">
+            <set>
+                <value>109</value>
+                <value>19</value>
+                <value>309</value>
+                <value>339</value>
+                <value>449</value>
+            </set>
+        </constructor-arg>
+
+        <constructor-arg name="map">
+            <map>
+                <entry key="1" value="one"/>
+                <entry key="2" value="two"/>
+                <entry key="3" value="three"/>
+                <entry key="4" value="four"/>
+                <entry key="5" value="five"/>
+            </map>
+        </constructor-arg>
+    </bean>-->
+     
+<!--         
+     autowire="byName"  
+     <bean name="contect" class=" com.my.spring.model.Contect"> must same contect
+     autowire="byType" 
+     <bean name="cont" class=" com.my.spring.model.Contect"> anythinig you want INTERNALY 
+     autowire="constructor"
+-->
+      
+         <bean name="stu2" class=" com.my.spring.model.Student" autowire="constructor">
+    <property name="id" value="1"/>
+    <property name="name" value="vikas"/>
+    <property name="gender" value="male"/>
+    <property name="list">
+<list>
+
+<value>109</value>
+<value>19</value>
+<value>309</value>
+<value>339</value>
+<value>449</value>
+<value>109</value>
+</list>
+
+</property>
+<property name="set">
+<set>
+<value>109</value>
+<value>19</value>
+<value>309</value>
+<value>339</value> 
+<value>449</value>
+<value>109</value>
+</set>
+</property>
+
+<property name="map">
+<map>
+<entry key="1" value="one"/>
+<entry key="2" value="two"/>
+<entry key="3" value="three"/>
+<entry key="4" value="four"/>
+<entry key="5" value="five"/>
+<entry key="4" value="FOUR"/>
+</map>
+</property>
+
+     </bean>
+     
+         <bean name="contect" class=" com.my.spring.model.Contect">
+          <constructor-arg name="city" value="delhi"/>
+          <constructor-arg name="" value="du"/>
+         </bean>
+
+</beans>
