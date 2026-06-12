@@ -13,7 +13,8 @@ public class Employee5 {
 	private String name="Guest";
 	private int salary = 10_000;
 	
-	
+	@Autowired
+	@Qualifier("address6")
 	private IAddress adddress;
 	
 	public Employee5() {
@@ -50,8 +51,8 @@ public class Employee5 {
 	public IAddress getAdddress() {
 		return adddress;
 	}
-	@Autowired
-	@Qualifier("address6")
+//	@Autowired
+//	@Qualifier("address6")
 	public void setAdddress(IAddress adddress) {
 		System.out.println("Employee5.setAdddress()");
 		this.adddress = adddress;

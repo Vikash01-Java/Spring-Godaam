@@ -14,8 +14,8 @@ public class Main5 {
 	     
 	     Student2 bean = ioc.getBean(Student2.class);
 	     System.out.println(bean);
-	     bean.getContect2().setCity("meerut");
-	     System.out.println(bean);
+//	     bean.getContect2().setCity("meerut");
+//	     System.out.println(bean);
 
 
 	}
